@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 27 11:15:54 2023
-
-@author: Francesco
-"""
-
-# Your Streamlit app code goes here.
-
-
 import pandas as pd
 import plotly.express as px
 import streamlit as st 
