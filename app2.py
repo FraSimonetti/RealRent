@@ -11,7 +11,7 @@ st.set_page_config(
 @st.cache_data 
 
 def get_data_from_excel():
-    df = pd.read_excel('TEST.xlsx').
+    df = pd.read_excel('TEST.xlsx')
     # Add 'hour' column to dataframe for second barchart
     return df
 
