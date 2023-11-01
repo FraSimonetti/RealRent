@@ -8,14 +8,10 @@ st.set_page_config(
   page_icon=":bar_chart:",
   layout="wide"                 
 )
-file_path = '/Users/Francesco/Desktop/REALRENTING/DATA/TEST.xlsx'
-
-
 @st.cache_data 
 
 def get_data_from_excel():
-    df= pd.read_excel(file_path
-    )
+    df = pd.read_excel('TEST.xlsx').
     # Add 'hour' column to dataframe for second barchart
     return df
 
