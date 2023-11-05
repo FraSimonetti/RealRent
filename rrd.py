@@ -4,6 +4,7 @@ import streamlit as st
 import numpy as np
 import seaborn as sns
 import altair as alt
+from PIL import Image
 
 # Set the page configuration at the beginning of your script
 # Page setup:
