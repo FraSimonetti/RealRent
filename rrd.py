@@ -64,7 +64,9 @@ df['Numero_Stanze'] = df['Stanze'].apply(map_stanze_to_description)
 # SIDEBAR
 
 # MAIN PAGE
-st.title(":bar_chart: RealRent Summary Dashboard")
+left_column, right_column = st.columns(2)
+with left_column:
+    st.subheader("Dettaglio immobili attualmente disponibili:")
 st.markdown("##")
 st.sidebar.header("Please Filter Here:")
 
