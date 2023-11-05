@@ -24,6 +24,10 @@ st.set_page_config(
 )
 st.markdown("Questa dashboard ha esclusivamente uno scopo illustrativo e dimostrativo. I dati visualizzati qui sono generici e non rappresentano alcuna situazione reale. Per ulteriori informazioni o per richiedere l'accesso alla nostra dashboard ufficiale, vi invitiamo a scriverci all'indirizzo e-mail realrent.tech@gmail.com o contattarci direttamente cliccando sul pulante qui sotto!")
 st.link_button("Contattaci", "https://real-rent.it/contact")
+left,center, right = st.columns([1,1, 1])
+image = Image.open('/Users/Francesco/Desktop/REALRENTING/Logo & Images/logo_black.png')
+with center:
+    st.image(image)
 @st.cache_data
 def get_data_from_excel():
     try:
