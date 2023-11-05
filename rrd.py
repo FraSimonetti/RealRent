@@ -145,7 +145,8 @@ with right:
     
 st.markdown('---')
 
-
+with st.container():
+   st.write("Seleziona un quartiere per evidenziarne i singoli immobili e confrontarli rispetto a quelli degli altri quartieri")
 # Widgets:
 # Filter data based on city selection:
 # Widgets:
