@@ -22,7 +22,7 @@ st.set_page_config(
     'Get help': "https://real-rent.it/contact"
     }
 )
-
+st.markdown("Questa dashboard ha esclusivamente uno scopo illustrativo e dimostrativo. I dati visualizzati qui sono generici e non rappresentano alcuna situazione reale. Per ulteriori informazioni o per richiedere l'accesso alla nostra dashboard ufficiale, vi invitiamo a contattarci all'indirizzo e-mail realrent.tech@gmail.com o tramite il nostro sito web all'indirizzo https://real-rent.it/contact.")
 
 @st.cache_data
 def get_data_from_excel():
