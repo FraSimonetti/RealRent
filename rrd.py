@@ -105,35 +105,42 @@ with right_column:
 
 st.markdown("---")
 
-# PIE CHARTS
+# BAR CHARTS
 average_prices = df_selection.groupby("Zona")["Prezzo richiesto €"].mean().round(1)
+average_prices = average_prices.sort_values(ascending=False)
 
-fig_product_sales = go.Figure(data=[go.Pie(
-    labels=average_prices.index,
-    values=average_prices,
-    textinfo="value+label",
+# Create a bar chart for average prices
+fig_product_sales = go.Figure(data=[go.Bar(
+    x=average_prices.index,
+    y=average_prices,
 )])
 
 fig_product_sales.update_layout(
     title_text="<b>Prezzo medio di vendita per zona<b>",
-    title_font_size=24,  # Increase the title font size
+    title_font_size=24,
+    xaxis_title="Zone",
+    yaxis_title="Prezzo medio di vendita",
 )
 
-
+# Calculate average prices for BnB
 average_prices_bnb = df_selection.groupby("Zona")["Tasso Medio Giornaliero (TMG) €"].mean().round(1)
 
-fig_hourly_sales = go.Figure(data=[go.Pie(
-    labels=average_prices_bnb.index,
-    values=average_prices_bnb,
-    textinfo="value+label",
+# Sort the data by average prices in descending order
+average_prices_bnb = average_prices_bnb.sort_values(ascending=False)
+
+# Create a bar chart for BnB average prices
+fig_hourly_sales = go.Figure(data=[go.Bar(
+    x=average_prices_bnb.index,
+    y=average_prices_bnb,
+    marker=dict(line=dict(color='white', width=2)),
 )])
 
 fig_hourly_sales.update_layout(
     title_text="<b>Prezzo medio per singola notte (BnB) </b>",
-    title_font_size=24,  # Increase the title font size
+    title_font_size=24,
+    xaxis_title="Zone",
+    yaxis_title="Prezzo medio per notte",
 )
-
-
 # Splitting the charts into two columns:
 left, right = st.columns(2)
 
