@@ -113,13 +113,13 @@ average_prices = average_prices.sort_values(ascending=False)
 fig_product_sales = go.Figure(data=[go.Bar(
     x=average_prices.index,
     y=average_prices,
-    marker=dict(line=dict(color='white', width=2), cmax = 10),
+    marker=dict(line=dict(color='white', width=2)),
 )])
 
 fig_product_sales.update_layout(
     title_text="<b>Prezzo medio di vendita per zona<b>",
     title_font_size=24,
-    xaxis_title="Zone",
+    xaxis_title="Quartiere",
     yaxis_title="Prezzo medio di vendita",
 )
 
@@ -139,7 +139,7 @@ fig_hourly_sales = go.Figure(data=[go.Bar(
 fig_hourly_sales.update_layout(
     title_text="<b>Prezzo medio per singola notte (BnB) </b>",
     title_font_size=24,
-    xaxis_title="Zone",
+    xaxis_title="Quartiere",
     yaxis_title="Prezzo medio per notte",
 )
 # Splitting the charts into two columns:
