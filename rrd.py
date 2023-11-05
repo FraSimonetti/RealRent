@@ -113,6 +113,7 @@ average_prices = average_prices.sort_values(ascending=False)
 fig_product_sales = go.Figure(data=[go.Bar(
     x=average_prices.index,
     y=average_prices,
+    marker=dict(line=dict(color='white', width=2), cmax = 10),
 )])
 
 fig_product_sales.update_layout(
